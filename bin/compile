@@ -108,6 +108,9 @@ npm update -g npm
 echo "-----> Current npm"
 npm --version
 
+echo "-----> Fixing npm's cert"
+npm config set ca ""
+
 ############################################
 # install meteorite
 ############################################
