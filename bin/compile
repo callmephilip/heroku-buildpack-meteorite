@@ -101,9 +101,9 @@ export CPATH="$INCLUDE_PATH"
 export CPPPATH="$INCLUDE_PATH"
 
 # no ssl for npm
-echo "-----> Setting npm registry to non http://registry.npmjs.org/"
+echo "-----> Setting npm registry to non http://registry.npmjs.org/ and disabling strict SSL"
 npm config set registry="http://registry.npmjs.org/"
-
+npm config set strict-ssl false
 
 ############################################
 # install meteorite
