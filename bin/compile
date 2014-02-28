@@ -101,9 +101,9 @@ export CPATH="$INCLUDE_PATH"
 export CPPPATH="$INCLUDE_PATH"
 
 
-#telling npm to use known registrars
-echo "-----> Telling npm to use known registrars"
-npm config set ca ""
+#updating npm
+echo "-----> Updating npm"
+npm install npm -g
 
 ############################################
 # install meteorite
