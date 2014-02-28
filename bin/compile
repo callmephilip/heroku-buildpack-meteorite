@@ -103,7 +103,7 @@ export CPPPATH="$INCLUDE_PATH"
 
 #updating npm
 echo "-----> Updating npm"
-npm install npm -g
+npm update -g npm
 
 ############################################
 # install meteorite
