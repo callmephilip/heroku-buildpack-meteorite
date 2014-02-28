@@ -129,6 +129,11 @@ echo "Meteor installed" | indent
 
 echo "Installing packages" | indent
 HOME="$BUILD_DIR" mrt install | indent
+
+echo "Npm settings used"
+npm config list
+
+
 echo "Building meteor bundle" | indent
 HOME="$VENDORED_METEOR" "$VENDORED_METEOR"/.meteor/meteor bundle "$CACHE_DIR"/bundle.tar.gz 2>&1 | indent
 
