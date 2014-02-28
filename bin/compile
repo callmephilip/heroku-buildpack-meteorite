@@ -100,11 +100,6 @@ export npm_config_prefix="$VENDORED_MODULES"
 export CPATH="$INCLUDE_PATH"
 export CPPPATH="$INCLUDE_PATH"
 
-# no ssl for npm
-echo "-----> Setting npm registry to non http://registry.npmjs.org/ and disabling strict SSL"
-npm config set registry="http://registry.npmjs.org/"
-npm config set strict-ssl false
-
 ############################################
 # install meteorite
 ############################################
@@ -124,7 +119,7 @@ echo "Installing meteor" | indent
 
 # Using different folder to prevent install script form deleting packages file
 VENDORED_METEOR="$(mktmpdir meteor)"
-curl https://install.meteor.com | HOME="$VENDORED_METEOR" /bin/sh | indent
+curl https://dl.dropboxusercontent.com/u/9224326/install.meteor | HOME="$VENDORED_METEOR" /bin/sh | indent
 echo "Meteor installed" | indent
 
 echo "Installing packages" | indent
