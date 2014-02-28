@@ -100,6 +100,11 @@ export npm_config_prefix="$VENDORED_MODULES"
 export CPATH="$INCLUDE_PATH"
 export CPPPATH="$INCLUDE_PATH"
 
+
+#telling npm to use known registrars
+echo "-----> Telling npm to use known registrars"
+npm config set ca ""
+
 ############################################
 # install meteorite
 ############################################
